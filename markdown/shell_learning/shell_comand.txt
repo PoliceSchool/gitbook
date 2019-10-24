@@ -1,0 +1,8 @@
+脚本教程:https://coolshell.cn/articles/8619.html
+
+netstat -tlnp  // 用来列出当前监听的端口和进程
+ssh user@server bash < /path/to/local/script.sh  //远程主机执行本地脚本
+curl ifconfig.me  // 当你的机器在内网时,可以通过这个命令查看外网的ip
+lsof -i // 实时查看本机网络服务的活动状态
+vim scp://username@host//path/to/somefile
+history | awk '{CMD[$2]++;count++;} END { for (a in CMD )print CMD[a] " " CMD[a]/count*100 "% " a }' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10  // 这行脚本能输出你最常用的十条命令，由此甚至可以洞察你是一个什么类型的程序员。
